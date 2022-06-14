@@ -16,6 +16,7 @@
 			<tr>
 				<th>First name</th>
 				<th>Last name</th>
+				<th>Detail</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -24,6 +25,7 @@
 				<tr>
 					<td>@employee.FirstName</td>
 					<td>@employee.LastName</td>
+					<td><a asp-controller="Employee" asp-action="Detail" asp-route-id="@employee.Id">View employee</a></td>
 				</tr>
 			}
 		</tbody>

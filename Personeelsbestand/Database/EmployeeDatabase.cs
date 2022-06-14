@@ -73,6 +73,7 @@ namespace Personeelsbestand.Database
 				employee.FirstName = newEmployee.FirstName;
 				employee.LastName = newEmployee.LastName;
 				employee.Employment = newEmployee.Employment;
+				employee.Age = newEmployee.Age;
 			}
 		}
 	}

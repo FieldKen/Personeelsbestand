@@ -42,7 +42,8 @@ namespace Personeelsbestand.Controllers
 				{
 					FirstName = vm.FirstName,
 					LastName = vm.LastName,
-					Employment = vm.Employment
+					Employment = vm.Employment,
+					Age = vm.Age
 				};
 
 				employeeDatabase.Insert(employee);
@@ -50,6 +51,23 @@ namespace Personeelsbestand.Controllers
 			}
 
 			return View();
+		}
+
+		[HttpGet]
+		public IActionResult Detail([FromRoute] int id)
+		{
+			var employee = employeeDatabase.Get(id);
+
+			var vm = new EmployeeDetailViewModel
+			{
+				FirstName = employee.FirstName,
+				LastName = employee.LastName,
+				Age = employee.Age,
+				Employment = employee.Employment,
+				Id = employee.Id
+			};
+
+			return View(vm);
 		}
 	}
 }

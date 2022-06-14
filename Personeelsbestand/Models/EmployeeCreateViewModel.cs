@@ -15,5 +15,8 @@ namespace Personeelsbestand.Models
 
 		[DisplayName("Date of employment")]
 		public DateTime Employment { get; set; }
+
+		[DisplayName("Age")]
+		public int Age { get; set; }
 	}
 }
